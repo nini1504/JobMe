@@ -4,7 +4,7 @@ from Database.db import get_connection
 conn = get_connection()
 cur = conn.cursor()
 
-df = pd.read_excel("Pandas/salario.xlsx")
+df = pd.read_excel("Data/salario.xlsx")
 cargos = df["Cargo"].dropna().unique()
 
 for cargo in cargos:
