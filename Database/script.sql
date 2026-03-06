@@ -24,3 +24,10 @@ VALUES
 (2, 'Administrador de Rede', false);
 
 DROP table cargos;
+
+CREATE TABLE empresas (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    linkedin VARCHAR(255),
+    imagem VARCHAR(255)
+)
