@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background-color: #0f172a; 
+}
+
+.top-section {
+  background-image: url('./assets/bg-tech.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+}
