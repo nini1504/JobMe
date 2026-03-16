@@ -19,14 +19,19 @@
 
 .banner-subtitle {
   font-size: 30px;
-  color: #fdfeff;
+  color: #ffffff;
   margin-bottom: 50px;
+  background-color: rgba(15, 23, 42, 0.5); /* Azul bem escuro transparente */
+  backdrop-filter: blur(4px); /* Embaça o que tem atrás da caixa */
+  padding: 15px 30px;
+  border-radius: 12px;
+  display: inline-block; /* Para a caixa não ocupar a tela toda */
 }
 
 .banner-search-box {
   display: flex;
   align-items: center;
-  background-color: #e0e0e0;
+  background-color: #fafafa;
   border-radius: 50px;
   padding: 8px 10px 8px 20px;
   width: 100%;
@@ -38,7 +43,7 @@
   background: transparent;
   border: none;
   outline: none;
-  color: white;
+  color: rgb(10, 10, 10);
   font-size: 22px;
   margin-left: 10px;
 }
@@ -48,7 +53,7 @@
   color: white;
   border: none;
   border-radius: 30px;
-  font-size: 15px;
+  font-size: 18px;
   padding: 12px 30px;
   cursor: pointer;
 }

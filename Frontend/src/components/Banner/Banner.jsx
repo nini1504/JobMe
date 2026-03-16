@@ -15,7 +15,7 @@ const Banner = () => {
       </p>
 
       <div className="banner-search-box">
-        <input type="text" placeholder="Buscar por cargos" />
+        <input type="text" placeholder="Buscar por cargos e salários" />
         <button className="search-button">Buscar</button>
       </div>
     </div>

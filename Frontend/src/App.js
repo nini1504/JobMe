@@ -4,6 +4,8 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Banner from './components/Banner/Banner';
 import Empresas from './pages/Empresas/Empresas';
+import Cargo from './pages/Cargo/Cargo';
+
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           } />
 
           <Route path="/empresas" element={<Empresas />} />
+
+          <Route path="/cargo/:nome" element={<Cargo />} />
         </Routes>
       </div>
     </Router>
