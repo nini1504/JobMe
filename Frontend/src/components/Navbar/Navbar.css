@@ -7,8 +7,8 @@
 }
 
 .navbar-logo h2 {
-  color: #0bcff7;
-  font-size: 30px;
+  color: #6e038fe0;
+  font-size: 38px;
 }
 
 .navbar-search input {
@@ -24,5 +24,5 @@
   color: #333;
   margin-left: 20px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 22px;
 }

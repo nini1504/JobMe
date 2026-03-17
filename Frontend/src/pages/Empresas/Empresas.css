@@ -1,12 +1,12 @@
 .empresas-container {
   padding: 40px;
   text-align: center;
-  background-color: #063070;
+  background-color: #e7edf7;
   min-height: 100vh;
 }
 
 .empresas-container h1 {
-  color: white;
+  color: rgb(102, 17, 199);
   margin-bottom: 50px;
   font-size: 50px;
 }
@@ -45,9 +45,9 @@
 }
 
 .empresa-card a {
-  color: #03496e;
+  color: #4d0ea0;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .empresa-card a:hover {

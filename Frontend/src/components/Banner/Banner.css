@@ -21,7 +21,7 @@
   font-size: 30px;
   color: #ffffff;
   margin-bottom: 50px;
-  background-color: rgba(15, 23, 42, 0.5); /* Azul bem escuro transparente */
+  background-color: rgba(28, 34, 49, 0.5); /* Azul bem escuro transparente */
   backdrop-filter: blur(4px); /* Embaça o que tem atrás da caixa */
   padding: 15px 30px;
   border-radius: 12px;
@@ -49,11 +49,11 @@
 }
 
 .search-button {
-  background-color: #0aada0; 
+  background-color: #be1edf; 
   color: white;
   border: none;
   border-radius: 30px;
-  font-size: 18px;
+  font-size: 20px;
   padding: 12px 30px;
   cursor: pointer;
 }
