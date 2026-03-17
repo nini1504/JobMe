@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
+from flask import send_from_directory
 import pdfplumber
 import pandas as pd
 import re
@@ -113,6 +114,10 @@ def listar_banco():
         } for r in rows])
     except Exception as e:
         return jsonify({"erro": str(e)}), 500
+    
+@app.route('/Imagens/<path:filename>')
+def imagens(filename):
+    return send_from_directory('Imagens', filename)
 
 @app.route('/api/empresas', methods=['GET'])
 def listar_empresas():
