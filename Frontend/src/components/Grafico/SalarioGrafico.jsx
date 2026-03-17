@@ -17,25 +17,61 @@ ChartJS.register(
   Legend
 );
 
-const SalarioGrafico = () => {
+const SalarioGrafico = ({ dados }) => {
+
+  if (!dados) return null;
 
   const data = {
-    labels: ["Junior", "Pleno", "Sênior"],
+    labels: ["Júnior", "Pleno", "Sênior", "Média"], 
     datasets: [
       {
         label: "Salário médio (R$)",
-        data: [1800, 4500, 11000], // dados fake por enquanto
+        data: [
+          dados.salario_junior,
+          dados.salario_pleno,
+          dados.salario_senior,
+          dados.media 
+        ],
         backgroundColor: [
-        "#5ed662",
-        "#3aa6ff",
-        "#c631e0"
-      ]
+          "#a53434",
+          "#c02ba7",
+          "#22b8a4",
+          "#8d2eaa" 
+        ],
+        borderRadius: 8
       }
     ]
   };
 
-  return <Bar data={data} />;
+  const options = {
+    plugins: {
+      legend: {
+        labels: {
+          font: {
+            size: 18
+          }
+        }
+      }
+    },
+    scales: {
+      x: {
+        ticks: {
+          font: {
+            size: 18
+          }
+        }
+      },
+      y: {
+        ticks: {
+          font: {
+            size: 18
+          }
+        }
+      }
+    }
+  };
 
+  return <Bar data={data} options={options} />;
 };
 
 export default SalarioGrafico;

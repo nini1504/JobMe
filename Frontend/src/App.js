@@ -23,6 +23,8 @@ function App() {
           <Route path="/empresas" element={<Empresas />} />
 
           <Route path="/cargo/:nome" element={<Cargo />} />
+
+          
         </Routes>
       </div>
     </Router>
