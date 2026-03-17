@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 from flask import send_from_directory
+from flask import request
 import pdfplumber
 import pandas as pd
 import re
@@ -95,13 +96,18 @@ def obter_salarios():
 @app.route('/api/listagem', methods=['GET'])
 def listar_banco():
     try:
+
+        termo = request.args.get('cargo', '')
+
         with get_connection() as conn:
             with conn.cursor() as cur:
                 cur.execute("""
                     SELECT c.nome, s.ano, s.salario_junior, s.salario_pleno, s.salario_senior, s.media 
                     FROM salarios s 
-                    JOIN cargos c ON s.id_cargo = c.id;
-                """)
+                    JOIN cargos c ON s.id_cargo = c.id
+                    ORDER BY similarity(c.nome, %s) DESC
+                    LIMIT 1;
+                """, (termo,))
                 rows = cur.fetchall()
                 
         return jsonify([{
@@ -112,6 +118,7 @@ def listar_banco():
             "salario_senior": float(r[4]) if r[4] is not None else 0,
             "media": float(r[5]) if r[5] is not None else 0
         } for r in rows])
+        
     except Exception as e:
         return jsonify({"erro": str(e)}), 500
     
