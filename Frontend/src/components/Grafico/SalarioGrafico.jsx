@@ -14,7 +14,7 @@ ChartJS.register(
   CategoryScale,
   LinearScale,
   Tooltip,
-  Legend
+  
 );
 
 const SalarioGrafico = ({ dados }) => {
@@ -25,7 +25,7 @@ const SalarioGrafico = ({ dados }) => {
     labels: ["Júnior", "Pleno", "Sênior", "Média"], 
     datasets: [
       {
-        label: "Salário médio (R$)",
+        
         data: [
           dados.salario_junior,
           dados.salario_pleno,
@@ -33,10 +33,10 @@ const SalarioGrafico = ({ dados }) => {
           dados.media 
         ],
         backgroundColor: [
-          "#a53434",
-          "#c02ba7",
-          "#22b8a4",
-          "#8d2eaa" 
+          "#456ad1",
+          "#e633c8",
+          "#19dac0",
+          "#b23bd6" 
         ],
         borderRadius: 8
       }
