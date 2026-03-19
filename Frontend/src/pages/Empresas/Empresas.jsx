@@ -17,7 +17,7 @@ const Empresas = () => {
   return (
     <div className="empresas-container">
 
-      <h1>Página de Empresas</h1>
+      <h1>Empresas que mais contrataram em 2025</h1>
 
       <div className="empresas-grid">
 
